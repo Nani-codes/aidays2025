@@ -33,7 +33,6 @@ import VenueAddress from "components/venue/VenueAddress";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
-import { a } from "vite-node/index-O2IrwHKf";
 
 interface IndexPageProps {
   tracks: Track[];
@@ -43,7 +42,6 @@ interface IndexPageProps {
   distinguishedSpeakers: SpeakerPreview[];
   speakersOnSlider: SpeakerPreview[];
   conferenceEvents: ConferenceEvent[];
-  closingSpeakers: any;
 }
 
 function PressLinksTemplate({ articles }: { articles: PressCoverageLink[] }) {
@@ -65,7 +63,6 @@ export default function IndexPage({
   distinguishedSpeakers,
   conferenceEvents,
   speakersOnSlider,
-  closingSpeakers,
 }: IndexPageProps) {
   return (
     <Layout>
@@ -74,24 +71,24 @@ export default function IndexPage({
         <meta name="description" content={getMetaDescription("main")} />
       </Head>
       <HeaderSection />
-      {/* <div className="mt-10">
+      <div className="mt-10">
         <SpeakersSlider speakers={speakersOnSlider} />
-      </div> */}
+      </div>
 
-      {/* <div className="container mt-10">
+      <div className="container mt-10">
         <SpeakersGrid
           gridSize={3}
           title={"Distinguished Speakers"}
           speakers={distinguishedSpeakers}
         />
-      </div> */}
+      </div>
 
-      {/* <MainAgenda events={conferenceEvents} /> */}
+      <MainAgenda events={conferenceEvents} />
 
-      {/* <div className="mt-10" id="tracks">
+      <div className="mt-10" id="tracks">
         <SectionHeader title="Tracks" center />
         <TracksGrid gridSize={3} tracks={tracks} />
-      </div> */}
+      </div>
 
       <div className="mt-10 text-center">
         <SectionHeader title="Venue" center />
@@ -120,23 +117,19 @@ export default function IndexPage({
         </div>
       </div>
 
-      {/* <div
-        className="container mt-10
-        border-y-2 border-gray-200 bg-white py-20
-      "
-      >
+      <div className="container mt-10 border-y-2 border-gray-200 bg-white py-20">
         <SectionHeader title="Partners" center />
         <PartnersSection partners={partners} className="mt-20" />
-      </div> */}
+      </div>
 
-      {/* <div className="mb-20 mt-10 flex flex-col gap-12">
+      <div className="mb-20 mt-10 flex flex-col gap-12">
         <SectionHeader title="Supporters" center />
         <SupportersTemplate supporters={supporters} />
-      </div> */}
+      </div>
 
-      {/* <div className="container mb-20">
+      <div className="container mb-20">
         <PressLinksTemplate articles={pressCoverageLinks} />
-      </div> */}
+      </div>
     </Layout>
   );
 }
