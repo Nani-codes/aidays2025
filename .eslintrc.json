@@ -1,0 +1,6 @@
+{
+  "extends": ["next",
+   "plugin:tailwindcss/recommended",
+   "prettier"],
+  "root": true
+}
