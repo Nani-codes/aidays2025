@@ -77,7 +77,7 @@ export default function Navbar() {
                 </Link>
               ))}
             </div>
-            <AnchorButton href="https://aidays2024.vercel.app/" target="_blank">AI DAYS 2024 Website</AnchorButton>
+            <AnchorButton href="/2024" target="_blank">AI DAYS 2024 Website</AnchorButton>
             </SheetContent>
           <SheetTrigger
             asChild
